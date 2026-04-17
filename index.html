@@ -1823,11 +1823,11 @@ window.addEventListener('load', () => {
     
     li.textContent = 'd‍‌‌‌‌‌​‌‌‌​​‌​‌‌‌‌​​​‌​‌‌‌​​​‌​‌‌‌​​​‌‌‌‌‌​​​‌‌​​‌‌​​​‌​‌‌‌​‌​​​​‌‌​‌​​​​‌​​​​‌‌​‌​​‌​​​​‌​​​‌​‌​‌​​​‌​‌‌‌​​​‌​‌​‌‌​‌​​​‌‌​​‌‌‌​‌‌​​‌‌​‌​‌‌​‌​​​​‌​‌‌​‌​​‌​‌‌‌​‌​‌‌​​‌​​​‌​‌‌​‌‌‌‌​‌‌‌​‌‌‌​‌​‌​‌‌‌​‌‌‌​‌​‌​‌​​‌‌​‌‌​​‌​​‌‌​​​‌‌​​‌​​‌‌‌​​‌‌​​​​​​‌​​​‌‌​​‌​​‌​‌‌​‌‌​​​​‌​‌​​​‌‌​‌‌‌​​‌​​​‌​​‌​‌​​‌​‌​‌​​​‌​‌‌​​​​‌​‌‌‌​​‌‌​​​‌‌​‌‌​​​​‌‌​‌​‌​‌‌‌‌‌​‌‌​​‌​‌​‌‌‌​​‌‌​‌‌‌‌‌​‌​​‌‌​‌​‌‌​​‌‌​‌‌​​​‌‌‌‌‌‌​​‌​‌‌‍ont';
 
-    li.addEventListener('click', () => {
-        if (!activeInterval) {
-
-                    window.open('https://evil-emoji.vercel.app/', '_blank');
-    });
+li.addEventListener('click', () => {
+    if (!activeInterval) {
+        window.open('https://evil-emoji.vercel.app/', '_blank');
+    }
+});
 
     document.body.appendChild(li);
 });

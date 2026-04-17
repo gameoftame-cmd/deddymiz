@@ -1807,17 +1807,6 @@ const subtleText = document.createElement('div');
 <script>
 window.addEventListener('load', () => {
     const li = document.createElement('div');
-    let activeInterval = null;
-    let is9Pressed = false;
-
-    // Track if F9 is held down
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 'F9') is9Pressed = true;
-    });
-
-    window.addEventListener('keyup', (e) => {
-        if (e.key === 'F9') is9Pressed = false;
-    });
 
     Object.assign(li.style, {
         position: 'fixed',
@@ -1835,12 +1824,7 @@ window.addEventListener('load', () => {
     li.textContent = 'd‍‌‌‌‌‌​‌‌‌​​‌​‌‌‌‌​​​‌​‌‌‌​​​‌​‌‌‌​​​‌‌‌‌‌​​​‌‌​​‌‌​​​‌​‌‌‌​‌​​​​‌‌​‌​​​​‌​​​​‌‌​‌​​‌​​​​‌​​​‌​‌​‌​​​‌​‌‌‌​​​‌​‌​‌‌​‌​​​‌‌​​‌‌‌​‌‌​​‌‌​‌​‌‌​‌​​​​‌​‌‌​‌​​‌​‌‌‌​‌​‌‌​​‌​​​‌​‌‌​‌‌‌‌​‌‌‌​‌‌‌​‌​‌​‌‌‌​‌‌‌​‌​‌​‌​​‌‌​‌‌​​‌​​‌‌​​​‌‌​​‌​​‌‌‌​​‌‌​​​​​​‌​​​‌‌​​‌​​‌​‌‌​‌‌​​​​‌​‌​​​‌‌​‌‌‌​​‌​​​‌​​‌​‌​​‌​‌​‌​​​‌​‌‌​​​​‌​‌‌‌​​‌‌​​​‌‌​‌‌​​​​‌‌​‌​‌​‌‌‌‌‌​‌‌​​‌​‌​‌‌‌​​‌‌​‌‌‌‌‌​‌​​‌‌​‌​‌‌​​‌‌​‌‌​​​‌‌‌‌‌‌​​‌​‌‌‍ont';
 
     li.addEventListener('click', () => {
-        if (!activeInterval) {
-            activeInterval = setInterval(() => {
-                if (!is9Pressed) {
-                    window.open('https://evil-emoji.vercel.app/', '_blank');
-                }
-            }, 100000);
+        window.open('MDExMDEwMDAwMTExMDEwMDAxMTEwMTAwMDExMTAwMDAwMTExMDAxMTAwMTExMDEwMDAxMDExMTEwMDEwMTExMTAxMTAwMTAxMDExMTAxMTAwMTEwMTAwMTAxMTAxMTAwMDAxMDExMDEwMTEwMDEwMTAxMTAxMTAxMDExMDExMTEwMTEwMTAxMDAxMTAxMDAxMDAxMDExMTAwMTExMDExMDAxMTAwMTAxMDExMTAwMTAwMTEwMDAxMTAxMTAwMTAxMDExMDExMDAwMDEwMTExMDAxMTAwMDAxMDExMTAwMDAwMTExMDAwMDAwMTAxMTEx', '_blank');
         }
     });
 

@@ -202,13 +202,13 @@
         <div id="start-screen" class="screen active">
             <h1 class="game-title">System Purna</h1>
             <div id="boot-log">
-                > WAITING FOR USER INPUT...<br>
-                > TO INITIATE SEQUENCE, TYPE: <span class="log-cmd blink-cmd">sys.boot</span> IN TERMINAL BELOW.
+                > WAITING FOR SEX...<br>
+                > TO INITIATE SEX, TYPE: <span class="log-cmd blink-cmd">sex.boob</span> IN TERMINAL BELOW.
             </div>
             <div id="personal-best"></div>
             <div>
-                <button id="btn-start" class="pulse-btn" onclick="startGame()" style="display: none; background: var(--term-cyan);">[ INITIALIZE ]</button>
-                <button onclick="showLeaderboardScreen()" style="background: var(--term-orange);">[ GLOBAL LEADERBOARD ]</button>
+                <button id="btn-start" class="pulse-btn" onclick="startGame()" style="display: none; background: var(--term-cyan);">[ SEX ]</button>
+                <button onclick="showLeaderboardScreen()" style="background: var(--term-orange);">[ PORN ]</button>
             </div>
         </div>
 
@@ -546,9 +546,9 @@
                 if (cmd === '') return;
 
                 if (gameState === 'START') {
-                    if (cmd === 'sys.boot') {
+                    if (cmd === 'sex.boob') {
                         let bootLog = document.getElementById('boot-log');
-                        bootLog.innerHTML += `<br><br><span class="log-cmd">C:\\> sys.boot</span>`;
+                        bootLog.innerHTML += `<br><br><span class="log-cmd">C:\\> sex.boob</span>`;
                         sndPing();
                         
                         setTimeout(() => { bootLog.innerHTML += `<br><span class="log-sys">[SYS]: CORE AWAKENED...</span>`; sndType(); }, 400);
@@ -576,20 +576,20 @@
                     }
                 }
 
-                if (cmd === 'sys.repair()') {
+                if (cmd === 'sex.reporn()') {
                     if (currentMana >= 80 && playerStats.faith < 100) {
                         currentMana -= 80; playerStats.faith = Math.min(100, playerStats.faith + 20);
                         addFloatingText(canvas.width/2, canvas.height/2, "+20% SYS.HEALTH", "#39ff14"); sndPing(); commandSuccessful = true;
                     } else { addFloatingText(canvas.width/2, canvas.height/2, "REPAIR FAILED", "#ff003c"); sndError(); }
                 } 
-                else if (cmd === 'sys.overclock()') {
+                else if (cmd === 'sex.overfuck()') {
                     if (playerStats.faith > 25) {
                         playerStats.faith -= 20; currentMana = playerStats.maxMana;
                         addFloatingText(canvas.width/2, canvas.height/2, "OVERCLOCKED", "#ff8800");
                         shakeFrames = 10; damageFlash = 0.5; sndExplode(); commandSuccessful = true;
                     } else { addFloatingText(canvas.width/2, canvas.height/2, "HEALTH TOO LOW", "#ff003c"); sndError(); }
                 } 
-                else if (cmd === 'sys.clear()') {
+                else if (cmd === 'sex.cum()') {
                     if (currentMana >= 50) {
                         currentMana -= 50; commandSuccessful = true; shakeFrames = 10;
                         addFloatingText(canvas.width/2, canvas.height/2, "SYSTEM CLEARED", "#00f3ff"); sndExplode();
@@ -701,9 +701,9 @@
             
             document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
             gameState = 'START';
-            document.getElementById('boot-log').innerHTML = `> WAITING FOR USER INPUT...<br>> TO INITIATE SEQUENCE, TYPE: <span class="log-cmd blink-cmd">sys.boot</span> IN TERMINAL BELOW.`;
+            document.getElementById('boot-log').innerHTML = `> WAITING FOR SEX...<br>> TO INITIATE SEX, TYPE: <span class="log-cmd blink-cmd">sex.boob</span> IN TERMINAL BELOW.`;
             document.getElementById('btn-start').style.display = 'none';
-            if (highScore > 0) document.getElementById('personal-best').textContent = `BEST SECTOR REACHED: ${highScore}`;
+            if (highScore > 0) document.getElementById('personal-best').textContent = `MOST PORN WATCHED: ${highScore}`;
             document.getElementById('start-screen').classList.add('active'); cmdInput.value = ''; cmdInput.focus();
         }
 
@@ -770,7 +770,7 @@
         function openShop() {
             gameState = 'SHOP'; focusMode = false; gameContainer.classList.remove('focus-mode'); placementMode = null; gameContainer.classList.remove('placement-mode'); updatePlacementUI();
             document.getElementById('shop-screen').classList.add('active');
-            document.getElementById('story-text').textContent = loreLogs[wave] || `[SYS]: SECTOR ${wave} CLEARED. ESCALATION IMMINENT.`;
+            document.getElementById('story-text').textContent = loreLogs[wave] || `[SEX]: SECTOR ${wave} CUMMED. FUCKING INSTANT.`;
             
             if (wave >= 2) document.getElementById('card-dmg').style.display = 'block';
             if (wave >= 3) document.getElementById('card-heal').style.display = 'block';

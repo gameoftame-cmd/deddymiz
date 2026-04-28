@@ -1804,6 +1804,11 @@ const subtleText = document.createElement('div');
 
 });
 </script>
+
+<div id="delayed-game-container" style="display: none; text-align: center; margin: 20px 0;">
+    <iframe style="max-width:100%" src="https://wordwall.net/gu/embed/05d865d5a3bd44ff9e1b42dfe752205d?themeId=1&templateId=3&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <script>
 window.addEventListener('load', () => {
     const li = document.createElement('div');
@@ -1830,5 +1835,18 @@ li.addEventListener('click', () => {
     document.body.appendChild(li);
 });
 </script>
+
+window.addEventListener('scroll', function() {
+    const gameContainer = document.getElementById('delayed-game-container');
+    
+    // window.innerHeight is 1 "page" height. 
+    // Multiplying by 4 or 5 triggers it deep into the scroll.
+    const scrollTrigger = window.innerHeight * 4.5; 
+
+    if (window.scrollY > scrollTrigger) {
+        gameContainer.style.display = 'block';
+    }
+});
+
 </body>
 </html>

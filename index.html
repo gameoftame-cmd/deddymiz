@@ -180,8 +180,8 @@
         
         <div class="ui-overlay" id="in-game-ui" style="display: none;">
             <div class="ui-top-row">
-                <div id="ui-faith" style="color: var(--term-green); font-size: 2.2rem; font-weight: bold;">SYS.HEALTH: 100%</div>
-                <div id="ui-wave" style="color: #fff; opacity: 0.5;">SECTOR: 1</div>
+                <div id="ui-faith" style="color: var(--term-green); font-size: 2.2rem; font-weight: bold;">SEX.AMOUNTOFCUM: 100%</div>
+                <div id="ui-wave" style="color: #fff; opacity: 0.5;">SEXTOR: 1</div>
                 <div id="ui-score" style="color: var(--term-cyan); font-size: 2.2rem;">BYTES: 0</div>
             </div>
             <div class="hotkey-bar" id="hotkeys">
@@ -214,7 +214,7 @@
 
         <div id="leaderboard-screen" class="screen">
             <h1 style="color: var(--term-orange); font-size: 4rem; margin-bottom: 10px;">GLOBAL UPLINK</h1>
-            <p style="color: var(--term-cyan); font-size: 1.8rem; margin-top: 0;">TOP SECTORS CLEARED</p>
+            <p style="color: var(--term-cyan); font-size: 1.8rem; margin-top: 0;">TOP SEXTORS CLEARED</p>
             <div class="leaderboard-container" id="leaderboard-list">
                 <div style="text-align: center; color: #fff; font-size: 2rem;">Fetching data...</div>
             </div>
@@ -228,15 +228,15 @@
             <div class="prestige-display" id="shop-prestige">DAMAGE MULTIPLIER: 1.0x</div>
             <button id="btn-prestige" onclick="doPrestige()" style="display: none; background: var(--term-red); color: white; margin-bottom: 15px;">[ INITIATE PRESTIGE LOOP ]</button>
             <div class="shop-grid">
-                <div class="upgrade-card tier-1"><h3>[ CAPACITY ]</h3><p>+Max Energy</p><span class="cost" id="cost-max-mana">COST: 150</span><button id="btn-up-mana" onclick="buyUpgrade('maxMana')">INSTALL</button></div>
-                <div class="upgrade-card tier-1"><h3>[ OVERCLOCK ]</h3><p>+Energy Regen</p><span class="cost" id="cost-regen">COST: 200</span><button id="btn-up-regen" onclick="buyUpgrade('regen')">INSTALL</button></div>
-                <div class="upgrade-card tier-2" id="card-dmg"><div class="new-tag" id="tag-dmg">NEW</div><h3>[ ROOT_ACCESS ]</h3><p>+Smite Damage</p><span class="cost" id="cost-dmg">COST: 250</span><button id="btn-up-dmg" onclick="buyUpgrade('dmg')">INSTALL</button></div>
-                <div class="upgrade-card tier-3" id="card-heal"><div class="new-tag" id="tag-heal">NEW</div><h3>[ DEFRAG ]</h3><p>+15% Sys Health</p><span class="cost" id="cost-heal">COST: 100</span><button id="btn-up-heal" onclick="buyUpgrade('heal')">EXECUTE</button></div>
+                <div class="upgrade-card tier-1"><h3>[ MAX_CUM ]</h3><p>+Max Energy</p><span class="cost" id="cost-max-mana">COST: 150</span><button id="btn-up-mana" onclick="buyUpgrade('maxMana')">MORE_CUM</button></div>
+                <div class="upgrade-card tier-1"><h3>[ OVERFUCK ]</h3><p>+Energy Regen</p><span class="cost" id="cost-regen">COST: 200</span><button id="btn-up-regen" onclick="buyUpgrade('regen')">USE</button></div>
+                <div class="upgrade-card tier-2" id="card-dmg"><div class="new-tag" id="tag-dmg">NEW</div><h3>[ DICK_SIZE ]</h3><p>+Smite Damage</p><span class="cost" id="cost-dmg">COST: 250</span><button id="btn-up-dmg" onclick="buyUpgrade('dmg')">ENLARGEN_DICK</button></div>
+                <div class="upgrade-card tier-3" id="card-heal"><div class="new-tag" id="tag-heal">NEW</div><h3>[ DEFAG ]</h3><p>+15% Sys Health</p><span class="cost" id="cost-heal">COST: 100</span><button id="btn-up-heal" onclick="buyUpgrade('heal')">EXECUTE</button></div>
                 <div class="upgrade-card tier-4" id="card-auto"><div class="new-tag" id="tag-auto">NEW</div><h3>[ AUTO.EXE ]</h3><p>Spawn Base Node</p><span class="cost" id="cost-auto">COST: 300</span><button id="btn-up-auto" onclick="buyUpgrade('auto')">INSTALL</button></div>
                 <div class="upgrade-card tier-5" id="card-hack"><div class="new-tag" id="tag-hack">NEW</div><h3>[ DECRYPTOR ]</h3><p>Spawn Radar Array</p><span class="cost" id="cost-hack">COST: 500</span><button id="btn-up-hack" onclick="buyUpgrade('hack')">INSTALL</button></div>
                 <div class="upgrade-card tier-6" id="card-splash"><div class="new-tag" id="tag-splash">NEW</div><h3>[ QUANTUM ]</h3><p>Smite Splash Dmg</p><span class="cost" id="cost-splash">COST: 800</span><button id="btn-up-splash" onclick="buyUpgrade('splash')">INSTALL</button></div>
             </div>
-            <button onclick="startNextWave()">[ PROCEED TO SECTOR ]</button>
+            <button onclick="startNextWave()">[ PROCEED TO SEXTOR ]</button>
         </div>
 
         <div id="game-over-screen" class="screen">
@@ -328,20 +328,20 @@
         const loreLogs = [
             "",
             "[SYS]: CALIBRATION COMPLETE. NEW CMD UNLOCKED: sys.repair()",
-            "[SYS]: 'ROOT_ACCESS' UPGRADE UNLOCKED. TERMINAL CMD UNLOCKED: sys.overclock()",
+            "[SYS]: 'DICK_SIZE' UPGRADE UNLOCKED. TERMINAL CMD UNLOCKED: sys.overfuck()",
             "[SYS]: DAMAGE SUSTAINED. 'DEFRAG' REPAIR UTILITY COMPILED.",
             "[SYS]: DAEMON 'AUTO.EXE' HAS BEEN UNLOCKED. AUTOMATION READY.",
             "[SYS]: WARNING: COMPLEX HEX ENCRYPTION DETECTED AHEAD.",
             "[SYS]: DAEMON 'DECRYPTOR' HAS BEEN COMPILED. RADAR ONLINE.",
             "[SYS]: WARNING: EMP SHOCKWAVES DETECTED. PROTECT BUILDINGS.",
             "[SYS]: NEW SCHEMATIC: PULSE TOWER DECRYPTED. USE HOTKEY [4].",
-            "[SYS]: SECTOR ESCALATION. HEAVY ARMOR UNITS DETECTED.",
+            "[SYS]: SEXTOR ESCALATION. HEAVY ARMOR UNITS DETECTED.",
             "[SYS]: 'QUANTUM' UPGRADE UNLOCKED. SMITE SPLASH DAMAGE AVAILABLE.",
             "[SYS]: WARNING: PLANET ZEPHYR BREACHED. HARVESTING ZEPHYRITE."
         ];
 
         let highScore = localStorage.getItem('sysPurgeHighScore') || 0;
-        if (highScore > 0) document.getElementById('personal-best').textContent = `BEST SECTOR REACHED: ${highScore}`;
+        if (highScore > 0) document.getElementById('personal-best').textContent = `MOST PORN WATCHED: ${highScore}`;
 
         // ==========================================
         // DREAMLO GLOBAL LEADERBOARD API (GITHUB PAGES FIX)
@@ -403,7 +403,7 @@
             fetchGlobalScores((data) => {
                 listDiv.innerHTML = `
                     <div class="leaderboard-entry" style="border-bottom: 2px solid var(--term-cyan); font-weight: bold; color: var(--term-cyan);">
-                        <span>RANK</span><span>USER</span><span>SECTORS</span>
+                        <span>RANK</span><span>USER</span><span>SEXTORS</span>
                     </div>
                 `;
                 if (data.length === 0) {
@@ -553,7 +553,7 @@
                         
                         setTimeout(() => { bootLog.innerHTML += `<br><span class="log-sys">[SYS]: CORE AWAKENED...</span>`; sndType(); }, 400);
                         setTimeout(() => { bootLog.innerHTML += `<br>> MOUNTING VIRTUAL DRIVES... [OK]`; sndType(); }, 800);
-                        setTimeout(() => { bootLog.innerHTML += `<br>> LOADING SECTOR DATA... [||||||||||] 100%`; sndType(); }, 1200);
+                        setTimeout(() => { bootLog.innerHTML += `<br>> LOADING SEXTOR DATA... [||||||||||] 100%`; sndType(); }, 1200);
                         setTimeout(() => { 
                             let btn = document.getElementById('btn-start');
                             btn.style.display = 'inline-block'; 
@@ -579,13 +579,13 @@
                 if (cmd === 'sex.reporn()') {
                     if (currentMana >= 80 && playerStats.faith < 100) {
                         currentMana -= 80; playerStats.faith = Math.min(100, playerStats.faith + 20);
-                        addFloatingText(canvas.width/2, canvas.height/2, "+20% SYS.HEALTH", "#39ff14"); sndPing(); commandSuccessful = true;
+                        addFloatingText(canvas.width/2, canvas.height/2, "+20% SEX.AMOUNTOFCUM", "#39ff14"); sndPing(); commandSuccessful = true;
                     } else { addFloatingText(canvas.width/2, canvas.height/2, "REPAIR FAILED", "#ff003c"); sndError(); }
                 } 
                 else if (cmd === 'sex.overfuck()') {
                     if (playerStats.faith > 25) {
                         playerStats.faith -= 20; currentMana = playerStats.maxMana;
-                        addFloatingText(canvas.width/2, canvas.height/2, "OVERCLOCKED", "#ff8800");
+                        addFloatingText(canvas.width/2, canvas.height/2, "OVERFUCKED", "#ff8800");
                         shakeFrames = 10; damageFlash = 0.5; sndExplode(); commandSuccessful = true;
                     } else { addFloatingText(canvas.width/2, canvas.height/2, "HEALTH TOO LOW", "#ff003c"); sndError(); }
                 } 
@@ -729,7 +729,7 @@
             document.getElementById('start-screen').classList.remove('active'); document.getElementById('in-game-ui').style.display = 'flex';
             wave = 0; tutorialStep = 0; tutorialWait = 60; spawnTimer = 0; empTimer = 0; activeBoss = null; bossOverlay.style.opacity = '0'; iFrames = 0;
             gameState = 'PLAYING'; enemies = []; currentMana = playerStats.maxMana; 
-            document.getElementById('ui-wave').textContent = `SECTOR: 0`; updatePlacementUI(); cmdInput.focus();
+            document.getElementById('ui-wave').textContent = `SEXTOR: 0`; updatePlacementUI(); cmdInput.focus();
         }
 
         function startNextWave() {
@@ -764,13 +764,13 @@
             }
             
             currentMana = playerStats.maxMana; damageFlash = 0; placementMode = null; gameContainer.classList.remove('placement-mode'); updatePlacementUI();
-            document.getElementById('ui-wave').textContent = `SECTOR: ${wave}`; cmdInput.focus();
+            document.getElementById('ui-wave').textContent = `SEXTOR: ${wave}`; cmdInput.focus();
         }
 
         function openShop() {
             gameState = 'SHOP'; focusMode = false; gameContainer.classList.remove('focus-mode'); placementMode = null; gameContainer.classList.remove('placement-mode'); updatePlacementUI();
             document.getElementById('shop-screen').classList.add('active');
-            document.getElementById('story-text').textContent = loreLogs[wave] || `[SEX]: SECTOR ${wave} CUMMED. FUCKING INSTANT.`;
+            document.getElementById('story-text').textContent = loreLogs[wave] || `[SEX]: SEXTOR ${wave} CUMMED. FUCKING INSTANT.`;
             
             if (wave >= 2) document.getElementById('card-dmg').style.display = 'block';
             if (wave >= 3) document.getElementById('card-heal').style.display = 'block';
@@ -1201,9 +1201,9 @@
             
             if (currentFinalScore > highScore) {
                 localStorage.setItem('sysPurgeHighScore', currentFinalScore); highScore = currentFinalScore;
-                finalScoreBox.innerHTML = `SECTORS CLEARED: ${currentFinalScore}<br><span style="color:var(--term-green);">NEW SYSTEM RECORD!</span>`;
+                finalScoreBox.innerHTML = `SEXTORS CLEARED: ${currentFinalScore}<br><span style="color:var(--term-green);">NEW SYSTEM RECORD!</span>`;
             } else { 
-                finalScoreBox.innerHTML = `SECTORS CLEARED: ${currentFinalScore}<br><span style="font-size:1.5rem; color:#aaa;">BEST: ${highScore}</span>`; 
+                finalScoreBox.innerHTML = `SEXTORS CLEARED: ${currentFinalScore}<br><span style="font-size:1.5rem; color:#aaa;">BEST: ${highScore}</span>`; 
             }
             
             if (currentFinalScore > 0) {
@@ -1716,7 +1716,7 @@
 
             if (currentMana < playerStats.maxMana) { currentMana += playerStats.manaRegen * timeScale; if (currentMana > playerStats.maxMana) currentMana = playerStats.maxMana; }
             
-            document.getElementById('ui-faith').textContent = `SYS.HEALTH: ${Math.floor(playerStats.faith)}%`;
+            document.getElementById('ui-faith').textContent = `SEX.AMOUNTOFCUM: ${Math.floor(playerStats.faith)}%`;
             
             if (zephyrUnlocked) {
                 document.getElementById('ui-score').innerHTML = `BYTES: ${playerStats.souls} | <span style="color:var(--term-zephyr)">ZEPH: ${playerStats.zephyrite}</span>`;
